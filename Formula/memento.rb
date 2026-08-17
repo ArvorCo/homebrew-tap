@@ -1,7 +1,6 @@
 class Memento < Formula
   desc "CPU-first local memory engine for humans and AI agents"
   homepage "https://github.com/ArvorCo/memento"
-  version "0.1.0"
   license any_of: ["MIT", "Apache-2.0"]
 
   depends_on "python@3.12"
@@ -32,15 +31,15 @@ class Memento < Formula
     bin.install "memento", "mementod", "memento-mcp"
     libexec.install "tools"
     (libexec/"memento").install "scripts/install.sh"
-    (share/"memento/skills").install ".agents/skills/memento-runtime"
+    (pkgshare/"skills").install ".agents/skills/memento-runtime"
     (bin/"memento-vault-sync").write <<~SH
       #!/bin/bash
       export PYTHONPATH="#{libexec}${PYTHONPATH:+:$PYTHONPATH}"
-      exec "#{formula_opt_bin("python@3.12")}/python3.12" -m tools.vault_sync.cli "$@"
+      exec "#{Formula["python@3.12"].opt_bin}/python3.12" -m tools.vault_sync.cli "$@"
     SH
     (bin/"memento-agent-install").write <<~SH
       #!/bin/bash
-      export MEMENTO_SKILL_SOURCE="#{share}/memento/skills/memento-runtime"
+      export MEMENTO_SKILL_SOURCE="#{pkgshare}/skills/memento-runtime"
       exec "#{libexec}/memento/install.sh" --program skip "$@"
     SH
   end
