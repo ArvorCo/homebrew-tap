@@ -35,7 +35,7 @@ class Memento < Formula
     (bin/"memento-vault-sync").write <<~SH
       #!/bin/bash
       export PYTHONPATH="#{libexec}${PYTHONPATH:+:$PYTHONPATH}"
-      exec "#{Formula["python@3.12"].opt_bin}/python3.12" -m tools.vault_sync.cli "$@"
+      exec "#{formula_opt_bin("python@3.12")}/python3.12" -m tools.vault_sync.cli "$@"
     SH
     (bin/"memento-agent-install").write <<~SH
       #!/bin/bash
