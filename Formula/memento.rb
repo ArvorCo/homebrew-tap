@@ -9,21 +9,21 @@ class Memento < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ArvorCo/memento/releases/download/v0.2.0/memento-v0.2.0-aarch64-apple-darwin.tar.gz"
-      sha256 "aa9ec531f43755c208efd75fe2cd538f50b4445ad9f3978ee4ab6a6bd10726e0"
+      url "https://github.com/ArvorCo/memento/releases/download/v0.2.1/memento-v0.2.1-aarch64-apple-darwin.tar.gz"
+      sha256 "a545f6ede1de9699b5fdf43a03db6b2f73288af44b2c1c3ef12ed6d5246179c8"
     else
-      url "https://github.com/ArvorCo/memento/releases/download/v0.2.0/memento-v0.2.0-x86_64-apple-darwin.tar.gz"
-      sha256 "f09dbdafad98e9371c18eba2de11ad16fdb83e89b6b844e77d7065f085c30237"
+      url "https://github.com/ArvorCo/memento/releases/download/v0.2.1/memento-v0.2.1-x86_64-apple-darwin.tar.gz"
+      sha256 "8de627f1642a5801c8d735537c57e365b9110d62947ca3589f92fc40ede8f568"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/ArvorCo/memento/releases/download/v0.2.0/memento-v0.2.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "4cb18b6a7f9a671910ba7ec6600db4d6cac199be97c6f2c04c4ad63e23bb5a3c"
+      url "https://github.com/ArvorCo/memento/releases/download/v0.2.1/memento-v0.2.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "62e6e03af553579cb031068cac3a7b89ef92c93f2f5bb81428af638469e4ede4"
     else
-      url "https://github.com/ArvorCo/memento/releases/download/v0.2.0/memento-v0.2.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1a5760ff6f6df248f43f1974b51e9ff1f228f5aff1fd404832cda1132628d64a"
+      url "https://github.com/ArvorCo/memento/releases/download/v0.2.1/memento-v0.2.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "dacc15346cef1b2d7ad944254b7c071c1ba210eb12351159ba36b0ba708a6b89"
     end
   end
 
